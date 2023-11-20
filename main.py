@@ -1,3 +1,7 @@
+"""
+基于锦标赛选择法的遗传规划，计算每一代的公式树群并以.pkl文件形式保存，并筛选出每代最优个体及其索引，以及其中通过测试集检测的个体。
+"""
+
 import numpy as np
 from readVirableData import read_virable_data
 from GPLEARN import ts_function_set, function_set
