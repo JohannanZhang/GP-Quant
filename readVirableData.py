@@ -1,7 +1,11 @@
 import pandas as pd
 import numpy as np
 from calculateVirableData import get_stock_list
-
+"""
+读取基于calculateVirableData存储的，特定年份下的所有股票84列的二维数据，通过剔除缺失行过多股票数据、剩余股票数据缺失行填充的方式，得到维度为（有效交易日数，有效交易股票数，变量数）的三维变量值数组array_x， 
+以及维度为（有效交易日数，有效交易股票数）的二维数组array_y，表示每只股票基于开盘价的每日收益率。
+array_x将被用于后续同公式树结合，计算因子值。array_y将用于因子的筛选。
+"""
 
 # 获取固定年份文件夹下的变量数据，并将变量与收益分别保存为三维数组X，二维数组Y
 def read_virable_data(year: int):
