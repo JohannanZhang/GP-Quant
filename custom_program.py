@@ -1,8 +1,14 @@
-"""The underlying data structure used in gplearn.
-
-The :mod:`gplearn._program` module contains the underlying representation of a
-computer program. It is used for creating and evolving programs used in the
-:mod:`gplearn.genetic` module.
+"""
+基于gplearn中program函数进行了改进，定义了公式树的类_Program，包含公式树的随机生成、适应度计算、变异等功能。
+类_Program中被重点用到的函数为： 
+build_program 公式树列表生成。用于生成一个类对象的program属性，为一个公式树列表，由算子Function对象与常数构成。 
+make_ts_function 随机设置时序算子的滚动窗口参数d。 
+execute 公式树对应因子计算。基于类对象属性program，将公式树列表与变量数据X结合，计算该公式树对应因子的数组，数据结构为二维数据（有效交易日数，有效交易股票数）
+raw_fitness 因子选股组合的超额收益信息比率。
+excess_ret 因子选股组合的全年每日超额收益率总和。 
+subtree_mutation 子树变异。从原先公式树中随机选择出一个子树，用一个随机生成的新子树进行替代。 
+hoist_mutation 简化变异。从原先公式树中随机选择出一个子树，并删除。 
+point_mutation 点变异。随机选择公式树的一个节点进行替换。
 """
 
 
