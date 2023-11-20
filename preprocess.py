@@ -1,3 +1,5 @@
+"""定义分别用于本地存储的特定年份特定股票的分时数据读取处理、股价标准化、按时间、价格分割数据，以及14个计算每日变量的函数。"""
+
 import pandas as pd
 import numpy as np
 import tushare as ts
