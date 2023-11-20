@@ -1,3 +1,7 @@
+"""基于preprocess文件，定义将特定年份特定股票分时数据处理为含有84个变量的日频数据的函数。
+以及通过多进程运算，将训练集2017年、测试集2015年原始数据处理为各个股票于当年84列变量的日频二维数据，并保存本地。
+"""
+
 import tushare as ts
 import pandas as pd
 import numpy as np
