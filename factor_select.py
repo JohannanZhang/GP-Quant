@@ -1,3 +1,7 @@
+"""
+读取本地保存的每一代公式树群，筛选每一代中适应度最高个体，并剔除与其他因子相关性大于0.7的个体，将最终有效的公式树因子保存在本地。
+"""
+
 import pickle
 import numpy as np
 import pandas as pd
