@@ -1,5 +1,5 @@
 """
-基于gplearn中function函数进行了改进，用于定义公式树中的算子类_Function
+基于gplearn中function函数进行了改进，定义了公式树中的算子类_Function
 """
 class _Function(object):
     def __init__(self, function, name, arity, is_ts=False):
